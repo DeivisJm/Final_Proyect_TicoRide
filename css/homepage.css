@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+#centered-image {
+    max-width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+table {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+
+}
+
+h5 {
+    text-align: center;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+
+    width: 25%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn-primary {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    position: absolute;
+    width: 20%;
+    top: 200;
+    left: 50;
+    color: #fff;
+    background-color: #767f87;
+    border-color: #000000;
+    font-weight: bold; 
+} 
+
+
+button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #2320bd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
