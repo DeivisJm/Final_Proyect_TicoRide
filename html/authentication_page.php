@@ -1,6 +1,4 @@
-<?php
-require($_SERVER['DOCUMENT_ROOT'] . '/shared/header.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +13,13 @@ require($_SERVER['DOCUMENT_ROOT'] . '/shared/header.php');
     <img id="centered-image" src="../img/Logo.png" alt="Car Travel Image">
 
     <div class="container">
-        <form action="#" method="post" onsubmit="return login()">
+        <form action="validateUser.php" method="post">
             <label for="username">User:</label>
             <input type="text" id="username" name="username" placeholder="Input text" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Input text" required>
-            
+
             <div class="d-flex justify-content-center">
                 <input type="submit" value="Login">
             </div>
@@ -29,7 +27,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/shared/header.php');
         </form>
         <p id="message"></p>
         <div id="register-link">
-            <p>Not an User? <a href="registration.html">Register Here</a></p>
+            <p>Not an User? <a href="registration.php">Register Here</a></p>
         </div>
     </div>
     <script type="text/javascript" src="../js/authentication.js"></script>

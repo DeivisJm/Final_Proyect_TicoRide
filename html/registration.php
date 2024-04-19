@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@
     <img id="centered-image" src="../img/Logo.png" alt="Car Travel Image">
 
     <div class="container">
-        <form action="#" method="post" onsubmit="return validateForm()">
+        <form action="createUser.php" method="post">
             <label for="firstname">First Name:</label>
             <input type="text" id="firstname" name="firstname" placeholder="Input text" required>
             <span id="firstname-error" class="error"></span>
