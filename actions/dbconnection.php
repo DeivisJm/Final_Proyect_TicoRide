@@ -1,14 +1,13 @@
-<?php 
-function dbconnection () {
+<?php
+function dbconnection()
+{
     $servername = "127.0.0.1:3307";
     $database = "proyect_ticos_rides";
     $username = "root";
-    $password = "";
+    $password = "root1234";
     $conn = mysqli_connect($servername, $username, $password, $database);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-        }
-        return $conn;
+    }
+    return $conn;
 }
-
-?>

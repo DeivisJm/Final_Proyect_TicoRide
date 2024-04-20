@@ -6,13 +6,13 @@ function validateForm() {
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm-password").value;
 
-
     var isValid = true;
-
-
+    
+    console.log("Hola")
     // validations
     if (firstname.trim() === "") {
         document.getElementById("firstname-error").innerHTML = "Por favor, ingrese su nombre.";
+        console.log("Hola")
         isValid = false;
     } else {
         document.getElementById("firstname-error").innerHTML = "";
