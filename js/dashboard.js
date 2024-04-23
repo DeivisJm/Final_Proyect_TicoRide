@@ -20,7 +20,11 @@ function editRide(element) {
     // Set the values in the desired input fields and labels
     document.getElementById("rideName").value = rideName;
     document.getElementById("startFrom").value = startFrom;
-    document.getElementById("end").value = endRides;
+    document.getElementById("end").value = end;
+    document.getElementById("description").value = description;
+    document.getElementById("departure").value = departure;
+    document.getElementById("arrival").value = arrival;
+    document.getElementById("days").value = days;
 }
 
 function deleteRide(link) {

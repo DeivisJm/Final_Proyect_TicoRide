@@ -14,12 +14,12 @@ CREATE TABLE IF NOT EXISTS users(
 
 CREATE TABLE IF NOT EXISTS rides (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    ride_name VARCHAR(255) NOT NULL,
-    start_from VARCHAR(255) NOT NULL,
-    end_to VARCHAR(255) NOT NULL,
+    rideName VARCHAR(255) NOT NULL,
+    startFrom VARCHAR(255) NOT NULL,
+    end VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
-    departure_time TIME NOT NULL,
-    arrival_time TIME NOT NULL,
+    departure TIME NOT NULL,
+    arrival TIME NOT NULL,
     days VARCHAR(255) not NULL,
     user_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)

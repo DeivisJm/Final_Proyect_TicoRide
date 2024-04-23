@@ -54,50 +54,57 @@
                         <div class="mr-auto p-2">
                             <p class="title">Your current list of Rides</p>
                         </div>
-                        <div class="p-2">
-                            <input type="submit" value="+">
-                        </div>
-                    </div>
-                    <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+                        <form action="../actions/createRide.php" method="post">
+                            <div class="p-2">
+                                <input type="submit" value="+" name="submit_ride">
+                            </div>
+                        </form>
 
-                        <thead class="thead-light">
-                            <tr>
-                                <th>Name</th>
-                                <th>Start</th>
-                                <th>End</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Brete</td>
-                                <td>Barrio Los Angeles</td>
-                                <td>Ciudad Quesada</td>
-                                <td>
-                                    <a onclick="editRide(this)" href="#">Edit</a> -
-                                    <a onclick="deleteRide(this)" href="#">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Casa</td>
-                                <td>Ciudad Quesada</td>
-                                <td>Los Angeles</td>
-                                <td>
-                                    <a onclick="editRide(this)" href="#">Edit</a> -
-                                    <a onclick="deleteRide(this)" href="#">Delete</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Oficina Chepe</td>
-                                <td>Ciudad Quesada</td>
-                                <td>San Pedro</td>
-                                <td>
-                                    <a onclick="editRide(this)" href="#">Edit</a> -
-                                    <a onclick="deleteRide(this)" href="#">Delete</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    </div>
+                    <form method="post">
+                        <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Start</th>
+                                    <th>End</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Brete</td>
+                                    <td>Barrio Los Angeles</td>
+                                    <td>Ciudad Quesada</td>
+                                    <td>
+                                        <a onclick="editRide(this)" href="#">Edit</a> -
+                                        <a onclick="deleteRide(this)" href="#">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Casa</td>
+                                    <td>Ciudad Quesada</td>
+                                    <td>Los Angeles</td>
+                                    <td>
+                                        <a onclick="editRide(this)" href="#">Edit</a> -
+                                        <a onclick="deleteRide(this)" href="#">Delete</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Oficina Chepe</td>
+                                    <td>Ciudad Quesada</td>
+                                    <td>San Pedro</td>
+                                    <td>
+                                        <a onclick="editRide(this)" href="#">Edit</a> -
+                                        <a onclick="deleteRide(this)" href="#">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </form>
+
 
                 </div>
             </div>
@@ -123,22 +130,19 @@
                             <div class="d-flex">
                                 <div class="mr-auto p-2">
                                     <label for="startfrom" class="form-label">Start From</label>
-                                    <input type="text" class="form-control startFromlabel" id="startFrom"
-                                        placeholder="">
+                                    <input type="text" class="form-control startFromlabel" id="startFrom" placeholder="">
                                 </div>
                                 <div class="p-2">
                                     <label for="end" class="form-label">End</label>
-                                    <input type="text" class="form-control endRides" id="end"
-                                        placeholder="">
+                                    <input type="text" class="form-control endRides" id="end" placeholder="">
 
                                 </div>
 
                             </div>
                         </div>
                         <div class="labelsDescription">
-                            <label for="description" class="form-label">Description</label>
-                            <textarea name="" id="" cols="50"
-                                rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
+                            <label for="description" class="form-label description">Description</label>
+                            <textarea name="description" id="description" cols="50" rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
                         </div>
                         <hr>
                         <h3>When</h3>
@@ -146,12 +150,12 @@
                             <div class="d-flex">
                                 <div class="row align-items-start ml-3">
                                     <label for="departure" class="form-label">Departure</label>
-                                    <input type="time" class="form-control" id="departure" value="06:45">
-                                    <label for="arrival" class="form-label">Estimated Arrival</label>
-                                    <input type="time" class="form-control" id="arrival" value="07:05">
+                                    <input type="time" class="form-control  departure" id="departure" value="06:45">
+                                    <label for="arrival" class="form-label ">Estimated Arrival</label>
+                                    <input type="time" class="form-control arrival" id="arrival" value="07:05">
                                 </div>
                                 <div class="p-4">
-                                    <label for="SelectDays" class="form-label">Select Days</label>
+                                    <label for="SelectDays" class="form-label  days">Select Days</label>
                                     <div id="days">
                                         <input type="checkbox" id="monday" name="day" value="Monday">
                                         <label for="monday">Monday</label><br>
@@ -173,13 +177,13 @@
                             </div>
                             <div class="d-flex">
                                 <div class="mr-auto p-2">
-                                    <a class="cancel" href="dashboard.html">Cancel</a>
+                                    <a class="cancel" href="dashboard.php">Cancel</a>
                                 </div>
                                 <div class="p-2">
                                     <button class="Save">Save</button>
                                 </div>
-                                
-                                
+
+
 
                             </div>
 
@@ -211,7 +215,7 @@
                 </div>
                 <div class="d-flex">
                     <div class="mr-auto p-2">
-                        <a href="dashboard.html">Cancel</a>
+                        <a href="dashboard.php">Cancel</a>
                     </div>
                     <div class="p-2">
                         <button class="Save">Save</button>
