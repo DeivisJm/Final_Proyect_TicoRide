@@ -1,6 +1,5 @@
 <?php
 
-
 $rideName = isset($_POST["rideName"]);
 $startFrom =  isset($_POST["startFrom"]);
 $end =  isset($_POST["end"]);
@@ -22,10 +21,6 @@ if (isset($_GET['id'])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
-
-
     // Verificar si la actualización fue exitosa y mostrar un mensaje al usuario
     if ($stmt_update->affected_rows > 0) {
         $message = "¡Los detalles del viaje se actualizaron correctamente!";

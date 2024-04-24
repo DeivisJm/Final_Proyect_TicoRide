@@ -54,15 +54,15 @@
                         <div class="mr-auto p-2">
                             <p class="title">Your current list of Rides</p>
                         </div>
-                        <form action="../actions/createRide.php" method="post">
-                            <div class="p-2">
-                                <input type="submit" value="+" name="submit_ride">
-                            </div>
-                        </form>
+                        <div class="p-2">
+                            <input type="submit" href="dashboard.php" value="+" name="submit_ride" onclick="ride(this)">
+                        </div>
+
 
                     </div>
-                    <form method="post">
+                    <form action="../actions/readRide.php" method="post">
                         <table id="ViajesRegistrados" class="table table-bordered table-striped mt-4">
+                            <input type="submit" value ="59">
 
                             <thead class="thead-light">
                                 <tr>
@@ -72,40 +72,9 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Brete</td>
-                                    <td>Barrio Los Angeles</td>
-                                    <td>Ciudad Quesada</td>
-                                    <td>
-                                        <a onclick="editRide(this)" href="#">Edit</a> -
-                                        <a onclick="deleteRide(this)" href="#">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Casa</td>
-                                    <td>Ciudad Quesada</td>
-                                    <td>Los Angeles</td>
-                                    <td>
-                                        <a onclick="editRide(this)" href="#">Edit</a> -
-                                        <a onclick="deleteRide(this)" href="#">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Oficina Chepe</td>
-                                    <td>Ciudad Quesada</td>
-                                    <td>San Pedro</td>
-                                    <td>
-                                        <a onclick="editRide(this)" href="#">Edit</a> -
-                                        <a onclick="deleteRide(this)" href="#">Delete</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+
                         </table>
-
                     </form>
-
-
                 </div>
             </div>
         </div>
@@ -119,76 +88,82 @@
             <div class="row justify-content-center mt-5">
                 <div class="col-md-8">
                     <div class="info-rides">
-                        <div class="labelsRides">
-                            <div class="labelName">
+                        <form action="../actions/createRide.php" method="post">
+                            <div class="labelsRides">
+                                <div class="labelName">
 
-                                <label for="ridename" class="form-label">Ride Name</label>
-                                <input type="text" class="form-control rideName" id="rideName" placeholder="">
-
-                            </div>
-
-                            <div class="d-flex">
-                                <div class="mr-auto p-2">
-                                    <label for="startfrom" class="form-label">Start From</label>
-                                    <input type="text" class="form-control startFromlabel" id="startFrom" placeholder="">
-                                </div>
-                                <div class="p-2">
-                                    <label for="end" class="form-label">End</label>
-                                    <input type="text" class="form-control endRides" id="end" placeholder="">
+                                    <label for="ridename" class="form-label">Ride Name</label>
+                                    <input type="text" class="form-control rideName" id="rideName" placeholder="">
 
                                 </div>
 
-                            </div>
-                        </div>
-                        <div class="labelsDescription">
-                            <label for="description" class="form-label description">Description</label>
-                            <textarea name="description" id="description" cols="50" rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
-                        </div>
-                        <hr>
-                        <h3>When</h3>
-                        <div class="labelsTime">
-                            <div class="d-flex">
-                                <div class="row align-items-start ml-3">
-                                    <label for="departure" class="form-label">Departure</label>
-                                    <input type="time" class="form-control  departure" id="departure" value="06:45">
-                                    <label for="arrival" class="form-label ">Estimated Arrival</label>
-                                    <input type="time" class="form-control arrival" id="arrival" value="07:05">
-                                </div>
-                                <div class="p-4">
-                                    <label for="SelectDays" class="form-label  days">Select Days</label>
-                                    <div id="days">
-                                        <input type="checkbox" id="monday" name="day" value="Monday">
-                                        <label for="monday">Monday</label><br>
-                                        <input type="checkbox" id="tuesday" name="day" value="Tuesday">
-                                        <label for="tuesday">Tuesday</label><br>
-                                        <input type="checkbox" id="wednesday" name="day" value="Wednesday">
-                                        <label for="wednesday">Wednesday</label><br>
-                                        <input type="checkbox" id="thursday" name="day" value="Thursday">
-                                        <label for="thursday">Thursday</label><br>
-                                        <input type="checkbox" id="friday" name="day" value="Friday">
-                                        <label for="friday">Friday</label><br>
-                                        <input type="checkbox" id="saturday" name="day" value="Saturday">
-                                        <label for="saturday">Saturday</label><br>
-                                        <input type="checkbox" id="sunday" name="day" value="Sunday">
-                                        <label for="sunday">Sunday</label><br>
+                                <div class="d-flex">
+                                    <div class="mr-auto p-2">
+                                        <label for="startfrom" class="form-label">Start From</label>
+                                        <input type="text" class="form-control startFromlabel" id="startFrom" placeholder="">
+                                    </div>
+                                    <div class="p-2">
+                                        <label for="end" class="form-label">End</label>
+                                        <input type="text" class="form-control endRides" id="end" placeholder="">
+
                                     </div>
 
                                 </div>
                             </div>
-                            <div class="d-flex">
-                                <div class="mr-auto p-2">
-                                    <a class="cancel" href="dashboard.php">Cancel</a>
-                                </div>
-                                <div class="p-2">
-                                    <button class="Save">Save</button>
-                                </div>
+                            <div class="labelsDescription">
+                                <label for="description" class="form-label description">Description</label>
+                                <textarea name="description" id="description" cols="50" rows="2">This is my everyday ride, from Barrio Los Angles to my job´s office in Second Floor of Cooperservidores Building</textarea>
+                            </div>
+                            <hr>
+                            <h3>When</h3>
+                            <div class="labelsTime">
+                                <div class="d-flex">
+                                    <div class="row align-items-start ml-3">
+                                        <label for="departure" class="form-label">Departure</label>
+                                        <input type="time" class="form-control  departure" id="departure" value="06:45">
+                                        <label for="arrival" class="form-label ">Estimated Arrival</label>
+                                        <input type="time" class="form-control arrival" id="arrival" value="07:05">
+                                    </div>
+                                    <div class="p-4">
+                                        <label for="SelectDays" class="form-label  days">Select Days</label>
+                                        <div id="days">
+                                            <input type="checkbox" id="monday" name="day" value="Monday">
+                                            <label for="monday">Monday</label><br>
+                                            <input type="checkbox" id="tuesday" name="day" value="Tuesday">
+                                            <label for="tuesday">Tuesday</label><br>
+                                            <input type="checkbox" id="wednesday" name="day" value="Wednesday">
+                                            <label for="wednesday">Wednesday</label><br>
+                                            <input type="checkbox" id="thursday" name="day" value="Thursday">
+                                            <label for="thursday">Thursday</label><br>
+                                            <input type="checkbox" id="friday" name="day" value="Friday">
+                                            <label for="friday">Friday</label><br>
+                                            <input type="checkbox" id="saturday" name="day" value="Saturday">
+                                            <label for="saturday">Saturday</label><br>
+                                            <input type="checkbox" id="sunday" name="day" value="Sunday">
+                                            <label for="sunday">Sunday</label><br>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="mr-auto p-2">
+                                        <a class="cancel" href="dashboard.php">Cancel</a>
+                                    </div>
+                                    <div class="p-2">
+                                        <button class="Save">Save</button>
+                                    </div>
+
+
+
+                                </div>
 
 
                             </div>
 
 
-                        </div>
+
+                        </form>
+
 
                     </div>
 

@@ -3,7 +3,7 @@ require_once('../actions/dbconnection.php');
     $conn =  dbconnection();
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $sql = "SELECT id, name, last_name FROM users WHERE username = '" . $username . "' AND password = '" . $password ."'";
+    $sql = "SELECT user_id, name, last_name FROM users WHERE username = '" . $username . "' AND password = '" . $password ."'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       //

@@ -1,5 +1,5 @@
 
-function editRide(element) {
+function ride(element) {
     // open Rides
     currentSection.textContent = "Rides";
     viajesView.style.display = "block";
@@ -26,6 +26,9 @@ function editRide(element) {
     document.getElementById("arrival").value = arrival;
     document.getElementById("days").value = days;
 }
+
+
+
 
 function deleteRide(link) {
     var row = link.closest('tr'); // Get the current row
