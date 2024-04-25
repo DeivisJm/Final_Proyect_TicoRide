@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Ticos-Ride</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/homepage.css">
+
 
 </head>
 
@@ -16,9 +17,8 @@
     <h2>Welcome to TicosRides.com</h2>
     <button id="loginButton">Login</button>
 
-
     <div class="container">
-        <h3>Seach for Ride</h3>
+        <h3>Search for Rides</h3>
 
         <div class="form-container">
             <label for="origin">From:</label>
@@ -31,7 +31,7 @@
         </div>
 
     </div>
-    <h5>Result for Rides that matches your criteria:</h5>
+    <h5>Results for Rides that match your criteria:</h5>
     <div class="table-container">
         <table class="table table-bordered table-striped mt-4">
             <thead class="thead-light">
@@ -43,33 +43,13 @@
                 </tr>
             </thead>
             <tbody id="tripTable">
-                <tr>
-                    <td>Barroyo</td>
-                    <td>Barrio Los Angeles</td>
-                    <td>Ciudad Quesada</td>
-                    <td>View</td>
-                </tr>
-                <tr>
-                    <td>Barroyo</td>
-                    <td>Ciudad Quesada</td>
-                    <td> Los Angeles</td>
-                    <td>View</td>
-                </tr>
-                <tr>
-                    <td>Yluna</td>
-                    <td>Ciudad Quesada</td>
-                    <td>San Pedro</td>
-                    <td>View</td>
-                </tr>
+                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/actions/loadRides.php'); ?>
+
             </tbody>
         </table>
     </div>
 
-
-
-
     <script type="text/javascript" src="../js/home.js"></script>
-
 </body>
 
 </html>

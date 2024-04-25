@@ -18,7 +18,7 @@ if (isset($_POST["register"]) && !$result1) {
     $username =  $_POST["username"];
     $password =  $_POST["password"];
     $confirmPassword = $_POST["confirm-password"];
-    $sql = "SELECT id, name, last_name FROM users WHERE username = '" . $username . "'";
+    $sql = "SELECT user_id, name, last_name FROM users WHERE username = '" . $username . "'";
     $select = $conn->query($sql);
     if ($select->num_rows > 0) {
         $userExist = true;

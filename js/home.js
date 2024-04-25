@@ -28,5 +28,5 @@ function saveTrip() {
   document.getElementById("destination").value = '';
 }
 document.getElementById("loginButton").addEventListener("click", function () {
-  window.location.href = "authentication_page.html";
+  window.location.href = "authentication_page.php";
 });
