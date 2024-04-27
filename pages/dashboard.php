@@ -89,6 +89,7 @@
                 <div class="col-md-8">
                     <div class="info-rides">
                         <form action="../actions/createRide.php" method="post">
+                            
                             <div class="labelsRides">
                                 <div class="labelName">
 
@@ -171,6 +172,9 @@
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 
         <div id="settings-view">
             <a href="#">Dashboard</a>

@@ -39,11 +39,11 @@
                     <th>User</th>
                     <th>Start</th>
                     <th>End</th>
-                    <th></th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody id="tripTable">
-                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/actions/loadRides.php'); ?>
+                <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/actions/rideHome.php'); ?>
 
             </tbody>
         </table>
